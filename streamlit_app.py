@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('Hello Wilders, welcome to my application!')
+st.title('welcome to my first test data science application with streamlit!')
 
 st.write("I enjoy to discover stremalit possibilities")
 
