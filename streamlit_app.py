@@ -1,38 +1,62 @@
-from collections import namedtuple
-import altair as alt
-import math
-import pandas as pd
 import streamlit as st
+import pandas as pd
 
-"""
-# Welcome to Streamlit!
+st.title('Hello Wilders, welcome to my application!')
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire :heart:
+st.write("I enjoy to discover stremalit possibilities")
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/weather2019.csv"
+df_weather = pd.read_csv(link)
+df_weather
+st.table(df_weather)
+st.dataframe(df_weather, 1000, 200)
+st.line_chart(df_weather['MAX_TEMPERATURE_C'])
 
-In the meantime, below is an example of what you can do with just a few lines of code:
-"""
-st.title('Hello Marie')
+import seaborn as sns
+viz_correlation = sns.heatmap(df_weather.corr(), 
+								center=0,
+								cmap = sns.color_palette("vlag", as_cmap=True)
+								)
 
-with st.echo(code_location='below'):
-    total_points = st.slider("Number of points in spiral", 1, 5000, 2000)
-    num_turns = st.slider("Number of turns in spiral", 1, 100, 9)
+st.pyplot(viz_correlation.figure)
 
-    Point = namedtuple('Point', 'x y')
-    data = []
+name = st.text_input("Please give me your name :")
+name_length = len(name)
+st.write("Your name has ",name_length,"characters")
 
-    points_per_turn = total_points / num_turns
+code = '''def hello():
+   print("Hello, Streamlit!")'''
+st.code(code, language='python')
 
-    for curr_point_num in range(total_points):
-        curr_turn, i = divmod(curr_point_num, points_per_turn)
-        angle = (curr_turn + 1) * 2 * math.pi * i / points_per_turn
-        radius = curr_point_num / total_points
-        x = radius * math.cos(angle)
-        y = radius * math.sin(angle)
-        data.append(Point(x, y))
+st.dataframe(df_weather.style.highlight_max(axis=0))
 
-    st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
-        .mark_circle(color='#0068c9', opacity=0.5)
-        .encode(x='x:Q', y='y:Q'))
+st.metric(label="CA", value="23 K-Eur", delta="1.2 K-Eur")
+
+col1, col2, col3 = st.columns(3)
+col1.metric("Temperature", "70 °F", "1.2 °F")
+col2.metric("Wind", "9 mph", "-8%")
+col3.metric("Humidity", "86%", "4%")
+
+
+st.json({    'foo': 'bar','baz': 'boz','stuff': [
+         'stuff 1',
+         'stuff 2',
+         'stuff 3',
+         'stuff 5',
+     ],
+ })
+
+
+df2=df_weather.iloc[:,[1,2]]
+st.line_chart(df2)
+st.line_chart(df_weather.MAX_TEMPERATURE_C)
+
+import numpy as np
+
+df = pd.DataFrame(
+     np.random.randn(1000, 2) / [50, 50] + [37.76, -122.4],
+     columns=['lat', 'lon'])
+df_weather	
+st.map(df)
+
+
