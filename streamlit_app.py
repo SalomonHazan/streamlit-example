@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-pip install scikit-learn
-pip install matplotlib
+import scikit-learn sl
+import matplotlib as pl
 
 st.title('Machine Learning... The Streamlit Way')
 
