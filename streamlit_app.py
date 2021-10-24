@@ -58,8 +58,7 @@ def get_classifier(clf_name,params):
 	elif clf_name=="SVM":
 		clf=SVC(C=params["C"]
 	else:
-		clf=RandomForestCalssifier(n_estimators=params["n_estimators"],
-					   max_depth=params["max_depth"],random_state=1234)
+		clf=RandomForestCalssifier(n_estimators=params["n_estimators"],max_depth=params["max_depth"],random_state=1234)
 	return clf
 			
 clf=get_classfier  (classifier_name,params)
