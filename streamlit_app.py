@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 from sklearn import datasets
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
 import matplotlib as pl
 import numpy as np
 
@@ -48,3 +50,17 @@ def add_parameter_ui(clf_name):
 
 add_parameter_ui(classifier_name)
 	     
+
+	
+def get_classifier(clf_name,params):
+	if clf_name=="KNN":
+		clf = KNeighborsClassifier(n_neighbors=params["K"])
+	elif clf_name=="SVM":
+		clf=SVC(C=params["C"]
+	else:
+		clf=RandomForestCalssifier(n_estimators=params["n_estimators"],
+					   max_depth=params["max_depth"],random_state=1234)
+	return clf
+			
+clf=  
+	
