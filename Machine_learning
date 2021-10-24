@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 pip install scikit-learn
+pip install matplotlib
 
 st.title('welcome to my first test data science application with streamlit!')
 
