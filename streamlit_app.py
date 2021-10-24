@@ -7,6 +7,7 @@ st.title('Machine Learning... The Streamlit Way')
 
 st.write("""
 # Explorer différents Classifier
+Quel est le meilleur modèle ?
 """)
 
 link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/weather2019.csv"
