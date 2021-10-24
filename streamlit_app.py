@@ -26,9 +26,10 @@ def get_dataset(dataset_name):
 	X=data.data
 	y=data.target
 	return X, y
+
 X, y=get_dataset(dataset_name)
 st.write("shape of dataset",X.shape)
-st.write("Number of classes", len(np.unique(y)
+st.write("Number of classes", len(np.unique(y)))
 
 
 	     
