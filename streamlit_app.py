@@ -1,40 +1,3 @@
-
- 
-Pulls
-Issues
-Marketplace
-Explore
- 
-@SalomonHazan 
-python-engineer
-/
-streamlit-demo
-Public
- Watch 
-2
- Star 36
- Fork 32
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-More
- master 
-streamlit-demo/main.py  / Jump to 
-Go to file
-
-@Drashti125
-Drashti125 st.pyplot(fig) here we have to pass a parameter
-Latest commit aaf16a8 on 21 Sep 2020
- History
- 2 contributors
-@Drashti125 @python-engineer
-109 lines (86 sloc)  2.67 KB
-Raw Blame
-     
 import streamlit as st 
 import numpy as np 
 
@@ -143,17 +106,3 @@ plt.ylabel('Principal Component 2')
 plt.colorbar()
 
 #plt.show()
-st.pyplot(fig)
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
