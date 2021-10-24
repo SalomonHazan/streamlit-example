@@ -10,5 +10,5 @@ st.write("""
 Quel est le meilleur modèle ?
 """)
 
-st.selectbox("Selectionner un Dataset",("Iris", "Breast Cancer", "Wine dataset")
+st.selectbox("Selectionner un Dataset",("Iris", "Breast Cancer", "Wine dataset"))
 	     
