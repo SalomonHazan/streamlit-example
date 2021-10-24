@@ -21,7 +21,7 @@ def get_dataset(dataset_name):
 		data=datasets.load_iris()
 	elif dataset_name=="Breast Cancer":
 		data=datasets.load_breast_cancer()
-	elese:
+	else:
 		data=datasets.load_wine()
 	X=data.data
 	y=data.target
