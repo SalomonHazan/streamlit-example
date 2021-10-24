@@ -8,7 +8,7 @@ st.write("I enjoy to discover stremalit possibilities")
 link = "https://raw.githubusercontent.com/murpi/wilddata/master/quests/weather2019.csv"
 df_weather = pd.read_csv(link)
 df_weather
-st.dataframe(df_weather, 1000, 200)
+#st.dataframe(df_weather, 1000, 200)
 st.line_chart(df_weather['MAX_TEMPERATURE_C'])
 
 import seaborn as sns
