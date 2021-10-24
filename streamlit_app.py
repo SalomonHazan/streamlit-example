@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import scikit-learn sl
+from sklearn.ensemble import RandomForestClassifier
 import matplotlib as pl
 
 st.title('Machine Learning... The Streamlit Way')
