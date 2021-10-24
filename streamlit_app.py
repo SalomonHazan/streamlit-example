@@ -76,6 +76,7 @@ def get_classifier(clf_name, params):
     return clf
 
 clf = get_classifier(classifier_name, params)
+
 #### CLASSIFICATION ####
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1234)
@@ -89,6 +90,7 @@ st.write(f'Classifier = {classifier_name}')
 st.write(f'Accuracy =', acc)
 
 #### PLOT DATASET ####
+
 # Project the data onto the 2 primary principal components
 pca = PCA(2)
 X_projected = pca.fit_transform(X)
