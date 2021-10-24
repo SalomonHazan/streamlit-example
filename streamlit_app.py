@@ -10,7 +10,7 @@ st.write("""
 Quel est le meilleur modèle ?
 """)
 
-dataset_name=st.selectbox("Selectionner un Dataset",("Iris", "Breast Cancer", "Wine dataset"))
+dataset_name=st.sidebar.selectbox("Selectionner un Dataset",("Iris", "Breast Cancer", "Wine dataset"))
 st.write(dataset_name)
 
 
