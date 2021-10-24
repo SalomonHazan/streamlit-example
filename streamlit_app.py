@@ -36,6 +36,12 @@ def add_parameter_ui(clf_name):
 	if clf_name=="KNN":
 		K=st.sidebar.slider("K",1,15)
 		params["K"]=K
+	elif clf_name=="SVM":
+		C=st.sidebar.slider("C",0.01,10.0)
+		params["C"]=C
+	else:
+		max_depth=st.sidebar.slider("max_depth",2,15)
+		n_estimators=st.sidebar.slider("n_estimators",1,100)
 	return params
 
 add_parameter_ui(classifier_name)
